@@ -13,3 +13,20 @@ E=4**(1/2)
 F=str(6) + "a"
 print(A)
 print(B)
+age=5
+#age="almost three"
+a_longer_name="hello,CFG!"
+print(age)
+print(a_longer_name)
+print(age)
+print("Bob"*3)
+#print("Bob"+3)
+print("hello".upper())
+print("GOODBYE".lower())
+print("the lord of the rings".title())
+age=5
+like="painting"
+age_description="My age is {} and I like {}.".format(age,like)
+print(age_description) #this prints the variable age_description
+print(10/3)
+print(10%3)
