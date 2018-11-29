@@ -52,3 +52,6 @@ age = 5
 like = "painting"
 age_description = "My age is {} and I like {}.".format(age, like)
 age_description = "My age is {1} and I like {0}.".format(age, like)
+name = input("What’s your name? ")
+city = input("What’s your city? ")
+print ("Hello {}! from {}".format(name,city))
