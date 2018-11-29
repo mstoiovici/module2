@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov 29 11:35:31 2018
+
+@author: maria
+"""
 print(5-6)
 print("\n")
 print(8*9)
@@ -41,3 +47,7 @@ print(result)
 strExample="a,b,c,d,happy"
 splitExample=strExample.split("-")
 print(splitExample)
+age = 5
+like = "painting"
+age_description = "My age is {} and I like {}.".format(age, like)
+age_description = "My age is {1} and I like {0}.".format(age, like)
