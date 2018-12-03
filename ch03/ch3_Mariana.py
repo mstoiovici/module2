@@ -41,7 +41,7 @@ def add_two_numbers_from_args(number1,number2):
 add_two_numbers_from_args(1,2)
   
 def hello_world_2args(a,b):
-    print("{} {} {} {}".format(a,b))
+    print("{} {}".format(a,b))
 a="hello"
 b="world"
 hello_world_2args(a,b)
