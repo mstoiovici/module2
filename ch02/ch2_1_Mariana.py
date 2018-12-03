@@ -62,3 +62,10 @@ city = input("What’s your city? ")
 print ("Hello {}! from {}".format(name,city))
 print("Hello "+name+"! from "+city)
 """
+s1="4"
+s2="5"
+s3=4
+result=int(s1)+int(s2)+s3
+#print(result)
+strExample="Mariana are mere"
+splitExample=strExample.split(" ")
