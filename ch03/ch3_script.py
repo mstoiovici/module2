@@ -18,22 +18,32 @@ print(ch3_functions.convert_distance(44))
 """
 
 from ch3_functions import *
+###########################
+
 add_two_numbers()
 print("\n")
 
+###################
+print("This is another exercise: ")
 a="hello"
 b="world"
 hello_world_2args(a,b)
 print("\n")
 
+##########################
+print("This is another exercise: ")
 a="love"
 b="coding"
 hello_world_2args(a,b)
 print("\n")
 
+########################33
+print("This is another exercise: ")
 convert_distance(44)
 print("\n")
 
+################################
+print("This is another exercise: ")
 area_one=get_size(3,2,3)[0]
 volume_one=get_size(3,2,3)[1]
 sizes_one=get_size(3,2,3)
@@ -41,19 +51,21 @@ print(area_one)
 print(volume_one)
 print("\n")
 
-celsius=float(input("what's the temperature in your city today?"))
-temp_converter(celsius)
-print("\n")
-
+######################################
+print("This is another exercise: ")
 celsius=float(input("what's the temperature in your city today?"))
 fahrenheit_one=temp_converter(celsius)[0]
 kelvin_one=temp_converter(celsius)[1]
 print("that's {} degrees in fahrenheit and {} degrees in kelvin.".format(fahrenheit_one,kelvin_one))
 print("\n")
 
+###############################333
+print("This is another exercise: ")
 cheese_and_crackers(20,30)
 print("\n")
 
+#####################################
+print("This is another exercise: ")
 age = add(30, 5)
 height = subtract(78, 4)
 weight = multiply(90, 2)

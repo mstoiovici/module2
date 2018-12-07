@@ -1,36 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Dec  5 09:51:49 2018
+Created on Thu Dec  6 12:26:10 2018
 
 @author: maria
 """
-"""
-#Task1
-class Customer(object):
-    def __init__(self,name,balance=0.0):
-        #return a customer object whose name is "name" and starting balance is "balance" 
-        self.name=name
-        self.balance=balance
-    def withdraw(self,amount):
-        #return the balance remaining after withdrawing "amount" dollars 
-        if amount>self.balance:
-            raise RuntimeError("Amount greater than available balance.")
-        self.balance-=amount
-        return self.balance
-    def deposit(self, amount):
-        #Return the balance remaining after depositing *amount* dollars.
-        self.balance += amount
-        return self.balance
 
-#now we can create customers/objects of customers
-        
-jason=Customer("Jason Taylor",1000.0)
-print(jason.name)
-"""
+#import sys
 
-import sys
-#Task2 #####ONE DIRECTION INHERITANCE
 class Animal():
     def __init__(self,name,age):
         self.name=name
@@ -55,17 +32,17 @@ class Cat(Dog):               # the Cat class inherites directly from Dog class,
 #Pissy.eat()             #superclass method
 
 
-#Task3
+
 class Robot():
-    def __init__(self,name,hours=0):
+    def __init__(self,name,time=0):
         self.name=name
-        self.hours=hours
+        self.time=time
     def move(self):
         print('...move move move...')
 class CleanRobot(Robot):
     def clean(self):
         print('I vacuumed all the dust today')
-    def clean_bathroom(self,time):
+    def clean_bathroom(self):
         print("I cleaned the toilet today....yuuuuk lady!!!")
         if time>11:
             print("I emptied the  bathroom trash bin as well")
@@ -74,10 +51,8 @@ class CleanRobot(Robot):
         else:
             print("And I was too lazy to check the bathroom trash bin.")
 class CookRobot(CleanRobot):
-    #def __init__(self,hours=0):
-        #self.hours=hours
     
-    def cook(self,time):
+    def cook(self):
         if time>11:
             print("It's too late to have dinner, I made you only a desert. I know you can't go to sleep without dessert!!!")
             self.clean()
@@ -87,17 +62,14 @@ class CookRobot(CleanRobot):
             print("I didn't cook. I'm not your robot woman!!!!!")
             print("and..")
         self.clean_bathroom()
-Robotica=CookRobot("Spock")
-time=int(input("At what hour did you arrive home?"))
-Robotica.cook(time)
-
-#Task4 create a super robot that can clean, move, bark, and play games
-
-"""
+        
+        
+        
+        
 class SuperRobot():
-    def __init__(self,name,age,hours=0):
+    def __init__(self,name,age,time=0):
         self.name=name
-        self.hours=hours
+        self.time=time
         self.age=age
         self.first=Robot(name)
         self.second=Dog(name,age)
@@ -114,12 +86,12 @@ class SuperRobot():
         return self.third.clean() #using cleanrobot class method
     def move_cook(self):
         self.move() 
-        return self.forth.cook(time)
+        return self.forth.cook()
 
 time=int(input("At what hour did you arrive home?"))
-name=sys.argv[1]
-age=sys.argv[2]
-machineDog=SuperRobot(name,age)
+#name=sys.argv[1]
+#age=sys.argv[2]
+machineDog=SuperRobot("Robotica",3)
 
 #machineDog.move()
 #machineDog.bark()
@@ -127,4 +99,3 @@ machineDog=SuperRobot(name,age)
 print(machineDog.name)
 
 machineDog.move_cook()
-"""
