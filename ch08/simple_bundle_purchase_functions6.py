@@ -7,6 +7,10 @@ Created on Tue Dec 11 14:21:16 2018
 """
 
 def DataBundlePurchase(truePasscode, balance,maxDataAmount):
+    """
+    DataBundlePurchase uses 3 parameters: truePasscode,balance,maxDataAmount which will be given when calling the main function DataBundlePurchase
+    if password from user will be the true password, the user will have tha option to choose from 2 transactions: see his balance or make a purchase
+    """
     if passwordCheck(truePasscode):
         transactionType=input("What do you want to do? \n1.Check your balance \n2.Purchase data bundle \nPlease type 1 or 2: ")
         if transactionType=="1":
@@ -20,6 +24,9 @@ def DataBundlePurchase(truePasscode, balance,maxDataAmount):
     
     
 def passwordCheck(truePasscode):
+    """
+    checks the password from the user to be the true password from the database- given here when calling the main function DataBundlePurchase
+    """
     attempt1=input("Please enter your password: ")
     if attempt1==truePasscode:
         return True
@@ -37,22 +44,22 @@ def passwordCheck(truePasscode):
             return False
     else:
         return False
-    
-def checkBalance(balance,dataAmount):
-    if balance>=dataAmount:
-        print("You have enough balance for this purchase.")
-        return True
-    else:
-        print("You don't have enough balance for this purchase.")
-        return False
 
 def showBalance(balance):
+    """
+    shows the current balance if this function is called
+    """
     print("Your balance is: {}.".format(balance))
     return balance
-        
-#def askForTransaction(transactionType):
-    
+
 def purchaseDataBundle(balance,maxDataAmount):
+    """
+    uses 2 parameters: the given balance and the maximum data amount which will be given when calling the main function DataBundlePurchase
+    checks if the phone number entered twice is the same by calling checkPhoneNumber function
+    checks if the amount from the user is within the given maximum data by calling checkData function
+    checks if the amount from the user is affordable within his balance by calling checkBalance function
+    checks if the amount from user is a multiple of 5 by calling the multipleOfFive function
+    """
     if checkPhoneNumber():
         dataAmount=int(input("The maximum amount of data is 100.How much data do you want to purchase? \n"))
 
@@ -70,14 +77,10 @@ def purchaseDataBundle(balance,maxDataAmount):
     
     else:
         return "You need to enter your phone number correctly twice. Please try again later."
-           
-def checkData(dataAmount,maxDataAmount):
-    if maxDataAmount>=dataAmount:
-        return True
-    else:
-        return False
-
 def checkPhoneNumber():
+    """
+    checks if the phone number entered twice is the same
+    """
     phoneNr1=input("Enter phone number: ")
     phoneNr2=input("Enter phone number again: ")
     if phoneNr1==phoneNr2:
@@ -85,7 +88,30 @@ def checkPhoneNumber():
     else:
         return "You need to enter your phone number correctly twice. Please try again later."
     
+def checkData(dataAmount,maxDataAmount):
+    """
+    checks if the amount from the user is within the given maximum data
+    """
+    if maxDataAmount>=dataAmount:
+        return True
+    else:
+        return False
+    
+def checkBalance(balance,dataAmount):
+    """
+    checks if the amount from the user is affordable within his balance 
+    """
+    if balance>=dataAmount:
+        print("You have enough balance for this purchase.")
+        return True
+    else:
+        print("You don't have enough balance for this purchase.")
+        return False
+
 def multipleOfFive(dataAmount):
+    """
+    checks if the amount from user is a multiple of 5
+    """
     if dataAmount%5==0:
         return True
     else:

@@ -7,6 +7,7 @@ Created on Tue Dec 11 14:21:16 2018
 """
 
 def DataBundlePurchase(truePasscode, balance):
+    
     if passwordCheck(truePasscode):
         if askForTransaction(balance):
             showBalance(balance)
