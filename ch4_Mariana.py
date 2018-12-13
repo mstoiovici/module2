@@ -50,10 +50,19 @@ print("How much do you weigh?"),
 weight=input()
 print (("So, you're %r tall and %r heavy.")%(age, height,weight))
 """
-
+"""
 age=raw_input("How old are you?")
 
 height=raw_input("How tall are you?")
 
 weight=raw_input("How much do you weigh?")
 print (("So, you're %r tall and %r heavy.")%(age, height,weight))
+"""
+###################everything above was moved into chapter 4, where it was supposed to be
+#############this file will be now used only for small learning tests
+#Lists and Tuples
+L=[9,6,0,3]
+print(L)
+print(sorted(L)) # so, this operation sorts the L list but it does not change it, in variable explorer, the list has the same order
+print(L)
+print(L.sort())
