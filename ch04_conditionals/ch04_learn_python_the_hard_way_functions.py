@@ -6,9 +6,6 @@ Created on Fri Dec  7 16:02:26 2018
 @author: maria
 """
 #############################ex30 from LPTHW
-people=30
-cars=40
-buses=15
 def decideCarsOrPeople():
     if cars>people:
         print("We should take the cars.")
@@ -67,5 +64,3 @@ def goInDarkRoomGame():
     else:
         print("You stumble around and fall on a knife and die. Good job!")
     
-    
- 
