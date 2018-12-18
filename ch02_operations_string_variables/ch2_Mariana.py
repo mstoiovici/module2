@@ -109,3 +109,10 @@ print()
 print("---------------------------task13-------------------------")
 strExample="Mariana are mere"
 splitExample=strExample.split(" ")
+
+print()
+print("---------------------------task14-------------------------")
+print("What is your name?")
+name=input().upper()
+name=name.upper()
+print("hello {}".format(name.upper()))
