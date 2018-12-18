@@ -26,6 +26,8 @@ print("--------------------------task2-----------------------")
 #silly = hi + (" " + name)*3
 #print(silly)
 
+
+
 print()
 print("--------------------------task3-----------------------")
 #x = 1
@@ -34,6 +36,7 @@ print("--------------------------task3-----------------------")
 #print("my fav number is", x, ".","x=", x)
 #print("my fav number is", x_str + "." + "x=" + x_str)
 ##print("my fav number is" + x_str + "." + "x=" + x_str)
+
 
 print()
 print("--------------------------task4-----------------------")
