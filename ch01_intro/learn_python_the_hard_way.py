@@ -5,7 +5,7 @@ Created on Wed Nov 28 16:56:28 2018
 
 @author: maria
 """
-
+print("--------------------------task1-----------------------")
 #print("Hello World!")
 #print("Hello Again")
 #print("I like typing this.")
@@ -14,6 +14,9 @@ Created on Wed Nov 28 16:56:28 2018
 #print("I'd much rather you 'not'.")
 #print('I "said" do not touch this.')
 
+
+print()
+print("--------------------------task2-----------------------")
 #hi = "hello there"
 #name = "ana"
 #greet = hi + name  
@@ -23,6 +26,8 @@ Created on Wed Nov 28 16:56:28 2018
 #silly = hi + (" " + name)*3
 #print(silly)
 
+print()
+print("--------------------------task3-----------------------")
 #x = 1
 #print(x)
 #x_str = str(x)
@@ -30,7 +35,8 @@ Created on Wed Nov 28 16:56:28 2018
 #print("my fav number is", x_str + "." + "x=" + x_str)
 ##print("my fav number is" + x_str + "." + "x=" + x_str)
 
-
+print()
+print("--------------------------task4-----------------------")
 #n=0
 #while n<5:
 #    print(n)
