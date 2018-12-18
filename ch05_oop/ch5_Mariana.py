@@ -5,8 +5,8 @@ Created on Wed Dec  5 09:51:49 2018
 
 @author: maria
 """
-"""
-#Task1
+
+print("------------------task1---------------------------------")
 class Customer(object):
     def __init__(self,name,balance=0.0):
         #return a customer object whose name is "name" and starting balance is "balance" 
@@ -27,10 +27,12 @@ class Customer(object):
         
 jason=Customer("Jason Taylor",1000.0)
 print(jason.name)
-"""
+
 
 import sys
-#Task2 #####ONE DIRECTION INHERITANCE
+print()
+print("------------------task2 ONE DIRECTION INHERITANCE---------------------------------")
+
 class Animal():
     def __init__(self,name,age):
         self.name=name
@@ -55,7 +57,8 @@ class Cat(Dog):               # the Cat class inherites directly from Dog class,
 #Pissy.eat()             #superclass method
 
 
-#Task3
+print()
+print("------------------task3---------------------------------")
 class Robot():
     def __init__(self,name,hours=0):
         self.name=name
@@ -91,9 +94,12 @@ Robotica=CookRobot("Spock")
 time=int(input("At what hour did you arrive home?"))
 Robotica.cook(time)
 
-#Task4 create a super robot that can clean, move, bark, and play games
 
-"""
+print()
+print("------------------task4---------------------------------")
+#create a super robot that can clean, move, bark, and play games
+
+
 class SuperRobot():
     def __init__(self,name,age,hours=0):
         self.name=name
@@ -127,4 +133,3 @@ machineDog=SuperRobot(name,age)
 print(machineDog.name)
 
 machineDog.move_cook()
-"""
