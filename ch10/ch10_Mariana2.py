@@ -208,12 +208,13 @@ def readInput():
     last3digit = input("Give the last3digit: ")
     global luckyNo 
     luckyNo = input("Give the luckyNo: ")
+    return name
     
 
 def generate():
     cont = 'Y'
     while (cont == 'Y'):
-        readInput()
+        name = readInput()
         #print(name + " " + last3digit + " " + luckyNo)
         phoneBook_dict.update({
             name: [last3digit, luckyNo]
@@ -227,3 +228,7 @@ def generate():
 #phoneBook_dictMama = generate()  
 generate()
 print(phoneBook_dict)
+
+
+print()
+################################split every version into single file and finish every version
