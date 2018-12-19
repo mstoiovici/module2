@@ -16,7 +16,7 @@ def guess(attempts,end_range):
     while attempts>0:
         answer=int(input("So, what's the number?\n"))
         if answer==number:
-            print("You guessed!You won!")
+            print("You guessed! You won!")
             break
         else:
             if answer<number:

@@ -8,7 +8,7 @@ Created on Thu Nov 29 11:35:31 2018
 
 print("---------------------------task1-------------------------")
 print(5-6)
-print("\n")
+print("\n") # prints a new empty line
 print(8*9)
 print(6/2)
 print(5/2)
@@ -36,8 +36,8 @@ print()
 print("---------------------------task4-------------------------")
 a="Chen" + "3"
 print(a)
-type(a)
-type("Chen" + "3")
+print(type(a))
+print(type("Chen" + "3"))
 
 print()
 print("---------------------------task5-------------------------")
@@ -85,15 +85,16 @@ print("---------------------------task10-------------------------")
 age = 5
 like = "painting"
 age_description = "My age is {} and I like {}.".format(age, like)
+print(age_description)
 age_description = "My age is {1} and I like {0}.".format(age, like)
-
+print(age_description)
 
 print()
 print("---------------------------task11-------------------------")
 name = input("What’s your name? ")
 city = input("What’s your city? ")
-print ("Hello {}! from {}".format(name,city))
-print("Hello "+name+"! from "+city)
+print ("Hello {} from {}!".format(name,city))
+print("Hello "+name+" from "+city)
 
 
 print()
@@ -109,6 +110,7 @@ print()
 print("---------------------------task13-------------------------")
 strExample="Mariana are mere"
 splitExample=strExample.split(" ")
+print(splitExample)
 
 print()
 print("---------------------------task14-------------------------")
@@ -119,20 +121,11 @@ print("hello {}".format(name.upper()))
 
 print()
 print("---------------------------task15:ex11 - LPTHW-------------------------")
-"""
+
 print("How old are you?"),
 age=input()
 print("How tall are you?"),
 height=input()
 print("How much do you weigh?"),
 weight=input()
-print (("So, you're %r tall and %r heavy.")%(age, height,weight))
-"""
-
-age=input("How old are you?")
-
-height=input("How tall are you?")
-
-weight=input("How much do you weigh?")
-print (("So, you're %r tall and %r heavy.")%(age, height,weight))    
- 
+print (("So, you're %r old, %r tall and %r heavy.")%(age, height,weight))

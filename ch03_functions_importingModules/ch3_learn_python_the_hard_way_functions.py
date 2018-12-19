@@ -13,6 +13,7 @@ def add_two_numbers():
     #print(result)
     print(str(number1)+" plus "+str(number2)+" is " +str(result))
     print("{} plus {} is {}.".format(number1,number2,result))
+    return result
 
 ################################## task2 ###########################   
 def hello_world_2args(a,b):
@@ -24,13 +25,13 @@ def convert_distance(miles):
     print("Converting distance in miles to kilometers:")
     print("Distance in miles:", miles)
     print("Distance in kilometers:", kilometers)
-
+    return kilometers
 ################################## task4 ###########################   
 def get_size(width,height,depth):
     area=width*height
     volume=width*height*depth
     sizes=(area,volume)
-    return(sizes)
+    return sizes
     
 ################################## task5 ###########################    
 def get_size(width,height,depth):
@@ -44,22 +45,24 @@ def temp_converter(celsius):
     fahrenheit=celsius*9.0/5.0+32
     kelvin=celsius+273.15
     print("that's {} degrees in fahrenheit and {} degrees in kelvin.".format(fahrenheit,kelvin))
+    values=(fahrenheit,kelvin)
+    return values
 
 ################################## task7 ###########################
 def temp_converter(celsius):
     fahrenheit=celsius*9.0/5.0+32
     kelvin=celsius+273.15
     temperature=(fahrenheit,kelvin)
-    return(temperature)
+    return temperature
 
-################################## task8 ###########################
+################################## task8 ex 19 from LPTHW  ###########################
 def cheese_and_crackers(cheese_count, boxes_of_crackers):
     print("You have %d cheeses!" % cheese_count)
     print("You have %d boxes of crackers!" % boxes_of_crackers)
     print("Man that's enough for a party!")
     print ("Get a blanket.\n")
     
-################################## task9 ###########################    
+################################## task9 ex 21 from LPTHW ###########################    
 def add(a,b):
     print("adding %d+%d" % (a,b))
     return a+b

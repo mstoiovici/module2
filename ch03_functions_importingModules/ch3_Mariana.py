@@ -32,6 +32,7 @@ def add_two_numbers():
     #print(result)
     print(str(number1)+" plus "+str(number2)+" is " +str(result))
     print("{} plus {} is {}.".format(number1,number2,result))
+    return result
 add_two_numbers()
 
 
@@ -62,7 +63,7 @@ hello_world_2args(a,b)
 
 print()    
 print("-----------------------------task6-------------------------------")
-def hello_world_2args(a,b,c,d):
+def hello_world_4args(a,b,c,d):
     print("{} {} {} {}".format(a,b,c,d))
 
 a1="I"
@@ -70,8 +71,8 @@ b1="love"
 c1="coding"
 d1="so much"
 
-hello_world_2args(a,b,c,d)
-#hello_world_2args("I", "love","coding","so much")
+hello_world_4args(a1,b1,c1,d1)
+#hello_world_4args("I", "love","coding","so much")
 
 
 print()    
@@ -81,6 +82,7 @@ def convert_distance(miles):
     print("Converting distance in miles to kilometers:")
     print("Distance in miles:", miles)
     print("Distance in kilometers:", kilometers)
+    return kilometers
     
 convert_distance(44)
 convert_distance(122.5)
@@ -92,7 +94,7 @@ def get_size(width,height,depth):
     area=width*height
     volume=width*height*depth
     sizes=(area,volume)
-    return(sizes)
+    return sizes
     
 area_one=get_size(3,2,3)[0]
 volume_one=get_size(3,2,3)[1]
@@ -107,6 +109,8 @@ def temp_converter(celsius):
     fahrenheit=celsius*9.0/5.0+32
     kelvin=celsius+273.15
     print("that's {} degrees in fahrenheit and {} degrees in kelvin.".format(fahrenheit,kelvin))
+    values=(fahrenheit,kelvin)
+    return values
 
 celsius=float(input("what's the temperature in your city today?"))
 temp_converter(celsius)
@@ -180,7 +184,7 @@ print(returned_value-5)
 
 
 print()    
-print("-----------------------------task15-------------------------------")
+print("-----------------------------task15 ex 19 from LPTHW-------------------------------")
 def cheese_and_crackers(cheese_count, boxes_of_crackers):
     print("You have %d cheeses!" % cheese_count)
     print("You have %d boxes of crackers!" % boxes_of_crackers)
@@ -200,7 +204,7 @@ cheese_and_crackers(amount_of_cheese+100, amount_of_crackers+1000)
 
 
 print()    
-print("-----------------------------task16-------------------------------")
+print("-----------------------------task16 ex 21 from LPTHW-------------------------------")
 def add(a,b):
     print("adding %d+%d" % (a,b))
     return a+b
