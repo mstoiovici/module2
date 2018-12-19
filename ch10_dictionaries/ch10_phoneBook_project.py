@@ -7,16 +7,8 @@ Created on Tue Dec 18 09:02:31 2018
 """
 
 
-print("-----17.12 further practice-------------------------------------------")
-print("-----17.12 further practice-------------------------------------------")
-metals_sPF={"gold":(19.3,272.1,4),"iron":(7.8,165.9,78),"zinc":(7.13,87.2,35.4),"lead":(11.4,485,27.8)}
-print(metals_sPF)
-print(sorted(metals_sPF.items(), key=lambda kv:kv[0]))
-a=sorted(metals_sPF.items(), key=lambda kv:kv[1])
-print(a[0:3])
-print(a[0:])
-print(sorted(metals_sPF.items(), key=lambda kv:kv[1][1],reverse=True)[2])
-print()
+
+
 #Practise with dict with function & subFun, variable, user inputs & if/else
 #Write a function that can generate a phoneBook_dict which contains 4 classmates’ info as below:
 #{Name: [‘last-3-digit of phoneNo.’, LuckyNo., PostCode, Town/city]}

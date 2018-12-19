@@ -8,12 +8,12 @@ Created on Fri Dec 14 09:50:09 2018
 print("----Chapter 10, Dictionaries-----------")
 # dictionaries syntax: {key1:value1,key2:value2,key3:value3}
 
-print("----Empty dictionaries-----------")
+print("----Task1 Empty dictionaries-----------")
 salary={}
 print(salary)
 
 print()
-print("----Adding a new value to a key-----------")
+print("----Task2 Adding a new value to a key-----------")
 salary["al"]=20000
 print(salary)
 salary["name"]="Mari Stoiovici"
@@ -24,33 +24,33 @@ salary["date of birth"]="15.06.1985"
 print(salary)
 
 print()
-print("----Getting dictionariy values through a key-----------")
+print("----Task3 Getting dictionary values through a key-----------")
 print(salary["al"])
 
 print()
-print("----Doing operations with those values----------")
+print("----Task4 Doing operations with those values----------")
 salary["al"]+=2000
 print(salary)
 print(salary["al"])
 
 print()
-print("----you can create dictionaries with keys &values included-----")
+print("----Task5 you can create dictionaries with keys &values included-----")
 tel={"alf":111,"bobby":222,"calvin":333}
 print(tel)
 
+
 print()
-print("----team work-----")
-print("--create a dictionary with key:your colleagues names and value: last three digits of their phoneNr---")
+print("--Task6 create a dictionary with key:your colleagues names and value: last three digits of their phoneNr---")
 team={"Mari":885,"Seraphine":385,"Millie":862}
 print(team)
 
 print()
-print("----add another collegue-----")
+print("----Task7 add another collegue-----")
 team["Chen"]=111
 print(team)
 
 print()
-print("----update the values with one more digit-----")
+print("----Task8 update the values with one more digit-----")
 team["Mari"]=1885
 team["Seraphine"]=1385
 team["Millie"]=1862
@@ -59,12 +59,12 @@ print(team)
 print(team)
 
 print()
-print("----deleting dictionary items-----")
+print("----Task9 deleting dictionary items-----")
 del team["Chen"]
 print(team)
 
 print()
-print("----get all keys from a dictionary-----")
+print("----Task10 get all keys from a dictionary-----")
 print(team.keys())
 print(type(team.keys()))
 list1=list(team.keys())
@@ -73,12 +73,12 @@ print(list1[0])
 print(type(list1))
 
 print()
-print("----get all values from a dictionary-----")
+print("----Task11 get all values from a dictionary-----")
 print(team.values())
 print(type(team.values()))
 
 print()
-print("----avoid look-ups key errors-----")
+print("----Task12 avoid look-ups key errors-----")
 print(team)
 if "chen" in team:
     print("chen",":",team["chen"])
@@ -90,7 +90,7 @@ else:
     print("Mari","not found!")
 
 print()
-print("----usong variables to avoid look-ups key errors-----")    
+print("----Task13 using variables to avoid look-ups key errors-----")    
 k="Seraphine"
 if k in team:
     print(k,":",team[k])
@@ -100,7 +100,7 @@ else:
 
 
 print()
-print("----using lambda function to sort a dictionary-----")
+print("----Task15 Using lambda function to sort a dictionary-----")
 print()
 print("----simple example-----")
 counts={"a":3,"c":1,"b":5}
@@ -113,7 +113,7 @@ print(labels)
 
 
 print()
-print("----now with multiple values for a key using sort-----")
+print("----Task16 now with multiple values for a key using sort-----")
 team={"Mari":(885,12),"Seraphine":(385,3),"Millie":(862,9)}
 print(team)
 key_list=list(team.keys())
@@ -124,23 +124,23 @@ print(key_list)
 
 
 print()
-print("----now with multiple values for a key using sorted-----")
+print("----Task17 now with multiple values for a key using sorted-----")
 team={"Mari":(885,12),"Seraphine":(385,3),"Millie":(862,9)}
 print(team)
 key_list=list(team.keys())
 print(key_list)
 print(sorted(key_list,key=lambda k:team[k][1]))
 # this next line comes with the same result as when you make a list(key_list) of the keys previously but Chen says it's not correct ?! 
-#print(sorted(team,key=lambda k:team[k][1]))
+print(sorted(team,key=lambda k:team[k][1]))
 
 
 
 print()
-print("--now with multiple values for a key using sort to sort ")
+print("--Task18 now with multiple values for a key using sort to sort ")
 team={"Mari":(885,"january",12),"Seraphine":(385,"october",3),"Millie":(862,"november",9)}
 print(team)
 # this comes with the same result as when you make a list of the keys previously but Chen says it's not correct ?! 
-#print(sorted(team,key=lambda k:team[k][1]))
+print(sorted(team,key=lambda k:team[k][1]))
 
 key_list=list(team.keys())
 print(key_list)
@@ -149,32 +149,32 @@ key_list.sort(key=lambda k:team[k][1][-1])
 
 
 print()
-print("-- using sorted to sort the dictionary-")
+print("-- Task19 using sorted to sort the dictionary-")
 team={"Mari":("Barbu",885,"january",12),"Seraphine":("Ana",385,"october",3),"Millie":("Costel",862,"november",9)}
 print(team)
 
 
 print()
-print("-- using sorted to sort the dictionary-- 2 ways, the same result")
+print("-- Task20 using sorted to sort the dictionary-- 2 ways, the same result")
 print(sorted(team,key=lambda k:team[k]))
 print(sorted(team,key=lambda k:team[k][0]))
 
 
 print()
-print("-- using sorted to sort the dictionary-- 2 ways, the same result")
+print("-- Task21 using sorted to sort the dictionary-- 2 ways, the same result")
 print(sorted(team.items(),key=lambda kv:kv))
 print(sorted(team.items(),key=lambda kv:kv[0]))
 
 
 print()
-print("-- using sorted to sort the dictionary-- 2 ways, the same result")
+print("-- Task22 using sorted to sort the dictionary-- 2 ways, the same result")
 print(sorted(team.items(),key=lambda kv:kv[1]))
 print(sorted(team.items(),key=lambda kv:kv[1][0]))
 
 
 
 print()
-print("-- ------------------------inclass miniproject with reverse sorting-------------")
+print("-- ------------------------Task23 inclass miniproject with reverse sorting-------------")
 
 print("-- sorting with sort(sort changes the list)---------------------------")
 metals={"gold":(19.3,272.1,4),"iron":(7.8,165.9,78),"zinc":(7.13,87.2,35.4),"lead":(11.4,485,27.8)}
@@ -210,6 +210,14 @@ print(sorted(metals.items(), key=lambda kv:kv[1][0],reverse=True))
 print()
 print(sorted(metals.items(), key=lambda kv:kv[1][1],reverse=True))
 
+print("-----17.12 further practice-------------------------------------------")
+metals_sPF={"gold":(19.3,272.1,4),"iron":(7.8,165.9,78),"zinc":(7.13,87.2,35.4),"lead":(11.4,485,27.8)}
+print(metals_sPF)
+print(sorted(metals_sPF.items(), key=lambda kv:kv[0]))
+a=sorted(metals_sPF.items(), key=lambda kv:kv[1])
+print(a[0:3])
+print(a[0:])
+print(sorted(metals_sPF.items(), key=lambda kv:kv[1][1],reverse=True)[2])
 
 
 
