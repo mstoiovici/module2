@@ -29,7 +29,7 @@ jason=Customer("Jason Taylor",1000.0)
 print(jason.name)
 
 
-import sys
+
 print()
 print("------------------task2 ONE DIRECTION INHERITANCE---------------------------------")
 
@@ -48,17 +48,17 @@ class Cat(Dog):               # the Cat class inherites directly from Dog class,
     def meow(self):         #subclass method
          print('Meow')
 
-#Snoopy=Dog(name,age)            # creating an object Snoopy with the subclass Dog and class Animal
-#Snoopy.bark()              #subclass method
-#Snoopy.eat()               #superclass method
+Snoopy=Dog("Alfred",5)            # creating an object Snoopy with the subclass Dog and class Animal
+Snoopy.bark()              #subclass method
+Snoopy.eat()               #superclass method
 
-#Pissy=Cat(name,age)             # creating an object Pissy with the subclass Cat and class Animal
-#Pissy.meow()           #subclass method
-#Pissy.eat()             #superclass method
+Pissy=Cat("Sissy",7)             # creating an object Pissy with the subclass Cat and class Animal
+Pissy.meow()           #subclass method
+Pissy.eat()             #superclass method
 
 
 print()
-print("------------------task3---------------------------------")
+print("------------------task3 Inheritance project---------------------------------")
 class Robot():
     def __init__(self,name,hours=0):
         self.name=name
@@ -73,7 +73,7 @@ class CleanRobot(Robot):
         if time>11:
             print("I emptied the  bathroom trash bin as well")
         elif time>6:
-            print ("I didn't empty the bathroom trash bin yet, it's too early. I don't want to do that task twice this evening lady!!!")
+            print ("I didn't empty the bathroom trash bin yet, it's too early. I don't want to do that task twice this evening.!!!")
         else:
             print("And I was too lazy to check the bathroom trash bin.")
 class CookRobot(CleanRobot):
@@ -89,14 +89,14 @@ class CookRobot(CleanRobot):
         else:
             print("I didn't cook. I'm not your robot woman!!!!!")
             print("and..")
-        self.clean_bathroom()
+        self.clean_bathroom(time)
 Robotica=CookRobot("Spock")
 time=int(input("At what hour did you arrive home?"))
 Robotica.cook(time)
 
 
 print()
-print("------------------task4---------------------------------")
+print("------------------task4 Association --------------------------------")
 #create a super robot that can clean, move, bark, and play games
 
 
@@ -123,13 +123,12 @@ class SuperRobot():
         return self.forth.cook(time)
 
 time=int(input("At what hour did you arrive home?"))
-name=sys.argv[1]
-age=sys.argv[2]
-machineDog=SuperRobot(name,age)
 
-#machineDog.move()
-#machineDog.bark()
-#machineDog.playGame()
+machineDog=SuperRobot("Ana",1)
+
+machineDog.move()
+machineDog.bark()
+machineDog.playGame()
 print(machineDog.name)
 
 machineDog.move_cook()
