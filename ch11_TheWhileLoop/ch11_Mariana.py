@@ -7,7 +7,6 @@ Created on Tue Dec 18 08:53:45 2018
 """
 
 print("----Chapter 11, The While Loop-----------")
-print()
 print("----Task1------------------------------------------")
 x=33
 while x>=1:
@@ -19,7 +18,7 @@ print(x)
 
 
 print()
-print("----Task1- return the sum of values from n down to 1,(n+(n-1)+(n-2)+...+2+1)------------")
+print("-Task2- return the sum of values from n down to 1,(n+(n-1)+(n-2)+...+2+1)---------")
 
 def get_sum(mySum,n):
     while n>0: 
@@ -29,13 +28,13 @@ def get_sum(mySum,n):
     return mySum
 mySum = 0 
 n = 3     
-#get_sum(mySum,n)
+get_sum(mySum,n)
 
 
 
 
 print()
-print("----Task1- return the values of multiplying from n down to 1,(n*(n-1)*(n-2)*...*2*1)------------")
+print("----Task3- return the values of multiplying from n down to 1,(n*(n-1)*(n-2)*...*2*1)------------")
 def get_multiplyed_value(myValue,n):
     while n>0: 
         myValue *= n
@@ -44,15 +43,15 @@ def get_multiplyed_value(myValue,n):
     return myValue
 myValue = 1
 n = 4    
-#get_multiplyed_value(myValue,n)
+get_multiplyed_value(myValue,n)
 
 
 print()
-print("-----------------------Task3------------------------------------")
+print("-----------------------Task4------------------------------------")
    
 def decide_pass(student_number):
     while student_number>0: 
-        print(student_number,":",end="")
+        print("You have ",student_number," to evaluate: ",end="")
         mark = int(input("what is the mark?\n"))
         if mark>=70:
             print("You pass first!")
@@ -63,12 +62,12 @@ def decide_pass(student_number):
         student_number-=1
 
 student_number =5
-#decide_pass(student_number)
+decide_pass(student_number)
 
 
 print()
-print("---------------------Task4-------------------------------------")
-print("---------------------Task4- ex1-------------------------------------")
+print("---------------------Task5-------------------------------------")
+print("--- ex1-----------------")
 
 i=55
 while i>10:
@@ -80,7 +79,7 @@ while i>10:
 
 
 print()
-print("---------------------Task4- ex2-------------------------------------")
+print("------- ex2--------------")
 def give_greetings(greeting_no):
     while greeting_no>0:
         name=input("Whats your name?\n")
@@ -91,9 +90,7 @@ def give_greetings(greeting_no):
        
 
 greeting_no=int(input("How many greeting would you like to give?"))
-#give_greetings(greeting_no)
+give_greetings(greeting_no)
 
 
 
-print()
-print("---------------------Task5-------------------------------------")

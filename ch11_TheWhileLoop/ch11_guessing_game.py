@@ -5,7 +5,7 @@ Created on Tue Dec 18 11:30:52 2018
 
 @author: maria
 """
-print()
+
 print("----Guessing game 1------------------------------------------")
 from random import randint
 def guess(attempts,end_range):
@@ -28,13 +28,13 @@ def guess(attempts,end_range):
         print("You have",attempts,"attempts left")
     print("End-Of-Game: thanks for playing! ")
 
-#guess(3,20)
+guess(3,20)
 
 
 
 print()
 print("----Guessing dicing game 2------------------------------------------")
-from random import randint
+#from random import randint
 def guess():
     game=input("Do you want to play? Choose yes or no:\n")
     while game=="yes":
@@ -62,12 +62,12 @@ def guess():
             break
     print("Thanks for playing! See you later!")
     
-#guess()
+guess()
 
 print()
-print("----Guessing dicing game 2- cleaner version------------------------------------------")
+print("----Guessing dicing game 2- cleaner vers------------------------------")
 
-from random import randint
+#from random import randint
 def guess():
     game=input("Do you want to play? Choose yes or no:\n")
     while game=="yes":
