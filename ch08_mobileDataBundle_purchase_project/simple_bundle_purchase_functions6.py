@@ -25,6 +25,7 @@ def DataBundlePurchase(truePasscode, balance,maxDataAmount):
     
 def passwordCheck(truePasscode):
     """
+    takes only one parameter:truePasscode
     checks the password from the user to be the true password from the database- given here when calling the main function DataBundlePurchase
     """
     attempt1=input("Please enter your password: ")
@@ -47,6 +48,7 @@ def passwordCheck(truePasscode):
 
 def showBalance(balance):
     """
+    takes only one parameter: balance
     shows the current balance if this function is called
     """
     print("Your balance is: {}.".format(balance))
@@ -55,10 +57,11 @@ def showBalance(balance):
 def purchaseDataBundle(balance,maxDataAmount):
     """
     uses 2 parameters: the given balance and the maximum data amount which will be given when calling the main function DataBundlePurchase
-    checks if the phone number entered twice is the same by calling checkPhoneNumber function
-    checks if the amount from the user is within the given maximum data by calling checkData function
-    checks if the amount from the user is affordable within his balance by calling checkBalance function
-    checks if the amount from user is a multiple of 5 by calling the multipleOfFive function
+    calls checkPhoneNumber function
+    calls checkData function
+    calls checkBalance function
+    calls the multipleOfFive function
+    after all the checks it authorises the purchase and takes it from the balance
     """
     if checkPhoneNumber():
         dataAmount=int(input("The maximum amount of data is 100.How much data do you want to purchase? \n"))
@@ -118,6 +121,8 @@ def multipleOfFive(dataAmount):
         return False
     
 """  
+# this could be an improved version of checkPhoneNumber() but too complicated for the moment
+#it checks that the input from the user with the phone nr has 11 digits
 def checkPhoneNumber():
     while True:
         phoneNr1= input("Enter phone number: ")
