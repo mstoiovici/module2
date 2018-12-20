@@ -129,6 +129,7 @@ team={"Mari":(885,12),"Seraphine":(385,3),"Millie":(862,9)}
 print(team)
 key_list=list(team.keys())
 print(key_list)
+
 print(sorted(key_list,key=lambda k:team[k][1]))
 # this next line comes with the same result as when you make a list(key_list) of the keys previously but Chen says it's not correct ?! 
 print(sorted(team,key=lambda k:team[k][1]))
