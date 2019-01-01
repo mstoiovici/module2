@@ -5,17 +5,18 @@ Created on Fri Dec 21 14:33:22 2018
 
 @author: maria
 """
-# tests both Square and Circles
-from MovingShapes2 import *
+
+from MovingShapes3 import *
 frame=Frame()
-numshapes=4
+numshapes=3
 shapes=[]
 size=60
 
 for i in range(numshapes):
-    shapes.append(Square(frame,100))
-    shapes.append(Circle(frame,100))
-for i in range(200):
+    shapes.append(Square(frame,size))
+    shapes.append(Circle(frame,size))
+    shapes.append(Diamond(frame,size))
+
+for i in range(500):
     for shape in shapes:
         shape.moveTick()
-frame.close()
