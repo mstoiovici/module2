@@ -32,28 +32,30 @@ class MovingShape:
         self.y+=self.dy
         self.figure.goto(self.x,self.y)
 
-        if self.x>self.maxx:
+        if self.x>=self.maxx:
             self.dx=1+(-10)*random.random()
             self.x+=self.dx
             self.y+=self.dy
             self.figure.goto(self.x,self.y)
-        if self.x<self.minx:
+        elif self.x<=self.minx:
             self.dx=1+10*random.random()
             self.x+=self.dx
             self.y+=self.dy
             self.figure.goto(self.x,self.y)
 
 
-        if self.y>self.maxy:
+        elif self.y>=self.maxy:
             self.dy=1+(-10)*random.random()
             self.x+=self.dx
             self.y+=self.dy
             self.figure.goto(self.x,self.y)
-        if self.y<self.miny:
+        elif self.y<=self.miny:
             self.dy=1+10*random.random()
             self.x+=self.dx
             self.y+=self.dy
             self.figure.goto(self.x,self.y)
+        else:
+            pass
 
 
 

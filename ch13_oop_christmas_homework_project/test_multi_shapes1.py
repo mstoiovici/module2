@@ -6,7 +6,7 @@ Created on Fri Dec 21 14:33:22 2018
 @author: maria
 """
 
-from MovingShapes3 import *
+from MovingShapes4 import *
 frame=Frame()
 numshapes=3
 shapes=[]
@@ -17,6 +17,6 @@ for i in range(numshapes):
     shapes.append(Circle(frame,size))
     shapes.append(Diamond(frame,size))
 
-for i in range(500):
+for i in range(200):
     for shape in shapes:
         shape.moveTick()
