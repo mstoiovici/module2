@@ -16,7 +16,7 @@ first_half('abcdef') → 'abc'
 """
 def first_half(str):
     lenght= len(str)
-    print(str[0:int(lenght/2)])
+    #print(str[0:int(lenght/2)])
     return str[0:int(lenght/2)]
 
 first_half("lilian")
