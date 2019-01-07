@@ -63,6 +63,7 @@ class MovingShape:
 
         self.figure.goto(self.x,self.y)         #calls goto() in order to move the figure using the updated values of x and y
 
+
 class Square(MovingShape):
     def __init__(self,frame,diameter):
         MovingShape.__init__(self,frame,"square",diameter)
