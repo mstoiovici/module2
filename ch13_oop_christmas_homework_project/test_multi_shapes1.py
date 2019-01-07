@@ -6,7 +6,7 @@ Created on Fri Dec 21 14:33:22 2018
 @author: maria
 """
 
-from MovingShapes4 import *
+from MovingShapes5 import *
 frame=Frame()
 numshapes=3
 shapes=[]

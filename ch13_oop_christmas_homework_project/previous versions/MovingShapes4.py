@@ -5,7 +5,7 @@ Created on Mon Dec 31 15:16:57 2018
 
 @author: maria
 """
-#07/9 solved when squares are hitting the walls
+#07/7 at start the shapes take different random directions
 from shape import *
 import random
 import math
