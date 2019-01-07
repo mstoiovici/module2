@@ -6,30 +6,8 @@ Created on Mon Dec  3 15:46:21 2018
 @author: maria
 """
 
-"""
-print("------------------------------task1-------------------------------")
-import ch3_learn_python_the_hard_way_functions
-print(ch3_learn_python_the_hard_way_functions.add_two_numbers())
 
-
-print()
-print("------------------------------task2-------------------------------")
-a="hello"
-b="world"
-print(ch3_learn_python_the_hard_way_functions.hello_world_2args(a,b))
-
-print()
-print("------------------------------task3-------------------------------")
-a="love"
-b="coding"
-print(ch3_learn_python_the_hard_way_functions.hello_world_2args(a,b))
-
-print()
-print("------------------------------task4-------------------------------")
-print(ch3_learn_python_the_hard_way_functions.convert_distance(44))
-"""
-
-from ch3_learn_python_the_hard_way_functions import *
+from ch3_file1_Mariana_functions import *
 
 
 print("------------------------------task1-------------------------------")
@@ -105,3 +83,26 @@ print (("Age: %d, Height: %d, Weight: %d, IQ: %d") % (age, height, weight, iq))
 print("Here is a puzzle.")
 what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
 print ("That becomes: ", what, "Can you do it by hand?")
+
+"""
+print("------------------------------task1-------------------------------")
+import ch3_file1_Mariana_functions
+print(ch3_file1_Mariana_functions.add_two_numbers())
+
+
+print()
+print("------------------------------task2-------------------------------")
+a="hello"
+b="world"
+print(ch3_file1_Mariana_functions.hello_world_2args(a,b))
+
+print()
+print("------------------------------task3-------------------------------")
+a="love"
+b="coding"
+print(ch3_file1_Mariana_functions.hello_world_2args(a,b))
+
+print()
+print("------------------------------task4-------------------------------")
+print(ch3_file1_Mariana_functions.convert_distance(44))
+"""
