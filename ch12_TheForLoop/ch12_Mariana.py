@@ -22,21 +22,28 @@ print(values)
 for val in values:
     print("--> "+str(val))
 
-print("------------")
-for val in values:
-    print("--> "+str(val+50))
-    
+print()    
+print("------Task2 - Update list value------")   
+print("-----exp1-------")
+values=[875,23,451] 
 for val in values:
     print("--> "+str(val))    # for every items do first step, then second step, then go to next item,
     print("--> "+str(val+50))
-    
-    
-print("------------")   
+
+print()
+print("-----exp2-------")  
+values=[875,23,451] 
 for val in values:
     print("--> "+str(val**2))
 
-print("--exp3--")  
-names=["mari","cata","ana"]
+print()
+print("--------Task3 - Create a list and use a for loop to print each item-----------")
+names=["mari","cata","ana","andreea"] #list
+for name in names:
+    print("***",name)   
+
+print()
+print("--Task4 Loop through a string data type--")  
 
 for char in "Yes":
     print(char)
@@ -52,21 +59,17 @@ for char in "I love codey codey!".split("-"): #this doesn't do anything
     print(char)   
     
 
+
+
 print()
-print("--------Task2 - Create a list and use a for loop to print each item-----------")
-
-names=["mari","cata","ana","andreea"] #list
-for name in names:
-    print("***",name)
-
-
+print("--------Task5 - Loop through a tuple data type----------")
 names=("mari","cata","ana","andreea") #tuple
 for name in names:
     print("***",name)
 
 print()    
-print("-------------Task6----------------------")    
-print("loop through the key-value pair")
+print("-------------Task6- loop through a dictionary data type---------------")    
+print("--exp1-loop through the key-value pair")
 metals={"gold":(19.3,272.1,4),"iron":(7.8,165.9,78),"zinc":(7.13,87.2,35.4),"lead":(11.4,485,27.8)}
 print(metals)
 metals_list=sorted(metals.items(),key=lambda kv:kv)
@@ -76,7 +79,7 @@ for metals in metals_list:
     
     
 print() 
-print("loop through the keys and only print the keys")
+print("--exp2 -loop through the keys and only print the keys")
 metals={"gold":(19.3,272.1,4),"iron":(7.8,165.9,78),"zinc":(7.13,87.2,35.4),"lead":(11.4,485,27.8)}
 print(metals)
 key_list=list(metals.keys())
@@ -88,7 +91,7 @@ for key in key_list:
 
 
 print() 
-print("loop through the values and only print the values")
+print("--exp3-loop through the values and only print the values")
 metals={"gold":(19.3,272.1,4),"iron":(7.8,165.9,78),"zinc":(7.13,87.2,35.4),"lead":(11.4,485,27.8)}
 print(metals)
 key_list=list(metals.keys())
@@ -98,6 +101,7 @@ print(key_list)
 for metals_key in key_list:
     print(metals[metals_key])
 
+print()
 print("------------------------------to do- and use the reverse as well----------------------------")
 print("loop through the key value pair after sorting the dict by the key ")
 print("loop through the key value pair after sorting the dict by the value")
@@ -105,7 +109,7 @@ print("loop through the key value pair after sorting the dict by the value")
 
 
 print()
-print("----------Task7 from curriculum----------------")
+print("----------Task7 from curriculum- loop through a dictionary----------------")
 print("-------exp1-----------")
 densities = {"iron":7.8, "gold":19.3, "zinc":7.13, "lead":11.4}
 metals = list(densities.keys())
@@ -114,7 +118,8 @@ metals.sort(reverse=True,key=lambda m:densities[m])
 print(metals)
 for metal in metals:
     print("{0:>8}={1:5.1f}".format(metal,densities[metal]))
-    
+
+print()    
 print("-----------------------to do  {0:>8}={1:5.1f}.format(metal,densities[metal]) -------")
     
 print()
@@ -131,14 +136,14 @@ for metal in metals:
 
 
 print()
-print("----------Task8 if else----------------")
+print("----------Task8 Combine counting loop and conditionals to filter out values---------------")
 print("----------exp1-----------")
 names=("mari","cata","ana","andreea") #tuple
 for name in names:
     if len(name)>=4:
         print(name)
     
-
+print()
 print("----------exp2-----------")
 densities = {"iron":(7.8,5,1000), "gold":(19.3,20,2), "zinc":(7.13,10,50), "lead":(11.4,3,25)}
 print(densities)
@@ -153,12 +158,14 @@ for metal in metals:
     else:
         print("The item doesn't meet the condition!")
 
-print("----------exp3-----------")
+print()
+print("----------Task9 Design a sum function-----------")
 """
 How about using ‘for’ loops to compute the sum of values in a list of numbers? Try
 the code below in a file. Can you convert it into a SumValues function with a
 returned sum value?
 """
+print()
 print("--step1--")
 values = [3, 12, 9]
 total = 0
@@ -167,7 +174,8 @@ for val in values:
     total += val
     print("after adding: ",val,"total is: ", total)
     print("TOTAL:"+ str(total)) 
-    
+
+print()    
 print("--step2 VERSION 1--")
 def get_sum(values,total=0):
     for val in values:
@@ -178,6 +186,7 @@ def get_sum(values,total=0):
 values = [3, 12, 9]
 get_sum(values)
 
+print()
 print("--step2 VERSION 2--")
 def get_sum(values=[],total=0):
     for val in values:
@@ -188,12 +197,11 @@ def get_sum(values=[],total=0):
 get_sum([3,12,9])
 
 
-print("--step2 VERSION 3  to do :have another function that retrieves the items in the list from a user using input--")
-# think of a shopping list {"bread":3, "meat":5,"eggs":4}, the user will give the list of items he want, and then the function will calculate the sum of their values!!!!
 
 
 print()
-print("------------------------task9 reminding len and range-------------------------------------")
+print("------------------------task 10 and 11 Loop with index and range-------------------------------------")
+print("--reminding len and range--")
 values=[3,12,9]
 print(len(values))
 print(len("lalalal"))
@@ -204,19 +212,21 @@ print(list(range(1,10,2)))
 
 
 print()
-print("------task 10 using range-----------------")
+print("---exp1---")
 values=[3,12,9]
 for i in range(len(values)):
     values[i]=values[i]*2
 print(values)
 
-
-print("--where i is the index of the item in the list----")
+print()
+print("-----exp2--- where i is the index of the item in the list----")
 values=[3,12,9]
 for index in range(len(values)):
     values[index]=values[index]*2
 print(values)
 
+print()
+print("-----exp3-------")
 values=[3,12,9]
 for i in range(len(values)):
     print("i is: ",i)
@@ -224,10 +234,13 @@ for i in range(len(values)):
     print("the new value for ",i," position is now ",values[i])
 print(values)
 
-print("----new ex using a step in range---")
+print()
+print("---- ex4 ---")
 for i in range(3,10,2):
     print(i)
-print("----new ex 1 using a step in range---")
+    
+print()    
+print("---- ex 5 ---")
 values=[3,12,9,5,6]
 for index in range(1,len(values),2):
     print("we are at index",index)
@@ -237,8 +250,8 @@ for index in range(1,len(values),2):
     print("we skip one position because we have a step of 2 in range")
 print(values)
 
-
-print("----new ex 2 using a step in range---")
+print()
+print("---- ex 6 ---")
 values=["milly","sarika","fabi","amina","joke","chen","loren"]
 for index in range(0,len(values),3):
     print("we are at index",index)
@@ -247,8 +260,9 @@ for index in range(0,len(values),3):
     print("we skip two positions because we have a step of 3 in range")
 print(values)
 
-
-print("----new ex 3 using a step in range---")
+print()
+print("----Task 12 -Using a break in a for loop---")
+print("----ex1---")
 values=["milly","sarika","fabi","amina","joke","chen","loren"]
 for index in range(0,len(values),2):
     if values[index]=="fabi":
@@ -260,8 +274,8 @@ for index in range(0,len(values),2):
     print("we skip two positions because we have a step of 3 in range")
 print(values)
 
-
-print("----new ex 4 using a step in range and if condition---")
+print()
+print("----ex 2 ---")
 values=["milly","sarika","fabi","amina","joke","chen","loren"]
 for index in range(0,len(values),2):
     print("we are at index",index)
@@ -273,8 +287,8 @@ for index in range(0,len(values),2):
     print("we skip one position because we have a step of 2 in range")
 print(values)
 
-
-print("----new ex 5 using  if condition then break---")
+print()
+print("---- ex 3 ---")
 nums=[1,5,30,200,101,100,22]
 for item in nums:
     if item>100:
@@ -282,8 +296,8 @@ for item in nums:
         break
 
 
-
-print("----new ex 5.1 using range and if condition then break---")
+print()
+print("---- ex 3.1 ---")
 nums=[1,5,30,200,101,100,22]
 for index in range(len(nums)):
     print("we are at",index,"position which has the value:",nums[index])
@@ -291,17 +305,20 @@ for index in range(len(nums)):
     if nums[index]>100:
         print("so ",index,"position has a value >100, which is",nums[index],"so we break the loop") 
         break
-    
+
+print()    
 print("----how to loop trough a dictionary printing key value pair---")
 masGiftDict={"jumper":5,"candy":2,"socks":3,"product":7}
 for k,v in masGiftDict.items():
     print(k,v)
 
+print()
 print("----how to loop trough a dictionary printing every item from the dictionary as a tuple---")   
 masGiftDict={"jumper":5,"candy":2,"socks":3,"product":7}    
 for item in masGiftDict.items():
     print(item)
 
+print()
 print("----counter---")
 colors=["red","green","red","green","blue","green","green"]
 d={}
@@ -313,7 +330,8 @@ for item in colors:
         d[item]+=1
         print(d)
 
-print("----nested loops---")
+print()
+print("----Task 13 -Creating nested loops in a for loop---")
 print("----exp1 is not ok, cause we override the value from every key value pair, and it's not the result we want in dict---")
 outer_vals_list=[1,2,3]
 inner_vals_list=["A","B","C"]
@@ -327,6 +345,7 @@ for outer_val in outer_vals_list:
         dict[outer_val]+=inner_val
         print(dict)
 
+print()
 print("----exp2 is not ok, cause we get dict={1:A,2:B,3:C}---")
 outer_vals_list=[1,2,3]
 inner_vals_list=["A","B","C"]
@@ -339,7 +358,7 @@ for outer_val in outer_vals_list:
         print(dict)
         index+=1
 
-
+print()
 print("----exp3  how do you get dict={1:[A,B,C],2:[A,B,C],3:[A,B,C]}---")
 outer_vals_list=[1,2,3]
 inner_vals_list=["A","B","C"]
@@ -355,7 +374,7 @@ for outer_val in outer_vals_list:
 
 
 
-
+print()
 print("----bla bla---")# this seems to do the same thing as what I got with nested loops
 
 from collections import defaultdict
@@ -369,6 +388,12 @@ for outer_val,inner_val in zip (outer_vals_list,inner_vals_list):
 print(d)
 
 
+print()
+print("----Task 14 Multiplication table with a for loop---")   
+for i in range(1,11):
+    for j in range(1,11):
+        print("{0:>3})".format(i*j),end="")
+    print("\n")
 
 
 
