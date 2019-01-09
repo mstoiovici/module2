@@ -136,7 +136,7 @@ for metal in metals:
 
 
 print()
-print("----------Task8 Combine counting loop and conditionals to filter out values---------------")
+print("----------Task8 Combine  loop and conditionals to filter out values---------------")
 print("----------exp1-----------")
 names=("mari","cata","ana","andreea") #tuple
 for name in names:
@@ -261,7 +261,7 @@ for index in range(0,len(values),3):
 print(values)
 
 print()
-print("----Task 12 -Using a break in a for loop---")
+print("---------------Task 12 -Using a break in a for loop---")
 print("----ex1---")
 values=["milly","sarika","fabi","amina","joke","chen","loren"]
 for index in range(0,len(values),2):
@@ -331,7 +331,7 @@ for item in colors:
         print(d)
 
 print()
-print("----Task 13 -Creating nested loops in a for loop---")
+print("---------------Task 13 -Creating nested loops in a for loop---")
 print("----exp1 is not ok, cause we override the value from every key value pair, and it's not the result we want in dict---")
 outer_vals_list=[1,2,3]
 inner_vals_list=["A","B","C"]
