@@ -5,17 +5,14 @@ Created on Wed Jan  9 11:58:17 2019
 
 @author: maria
 """
-#from  people_items import *
-
 import sqlite3
 conn=sqlite3.connect("phoneBookProject1.db")
 c=conn.cursor()
 
-
 def create_table():
     c.execute("CREATE TABLE IF NOT EXISTS businesses(business_category TEXT , business_name TEXT, adress_line_1 TEXT,adress_line_2 TEXT, adress_line_3 TEXT,postcode TEXT, country TEXT,telephone_number TEXT)")
     c.execute("CREATE TABLE IF NOT EXISTS people(first_name TEXT , last_name TEXT, adress_line_1 TEXT,adress_line_2 TEXT, adress_line_3 TEXT,postcode TEXT, country TEXT,telephone_number TEXT)")
-    c.execute("CREATE TABLE IF NOT EXISTS postcodes(postcode TEXT , latitude TEXT, longitude TEXT)")
+    c.execute("CREATE TABLE IF NOT EXISTS location(postcode TEXT , latitude TEXT, longitude TEXT)")
 
 
 def people_data_entry():
@@ -29,6 +26,8 @@ def people_data_entry():
         #print(values_list)
         c.execute("INSERT INTO people(first_name,last_name,adress_line_1,adress_line_2,adress_line_3,postcode,country,telephone_number) VALUES(?,?,?,?,?,?,?,?)", (values_list))
         conn.commit()
+        c.close()
+        conn.close()
     
 
 def business_data_entry():   
@@ -37,15 +36,17 @@ def business_data_entry():
         print(values_list)
         c.execute("INSERT INTO businesses(business_name, adress_line_1,adress_line_2, adress_line_3,postcode, country,telephone_number,business_category) VALUES(?,?,?,?,?,?,?,?)", (values_list))
         conn.commit()
+        c.close()
+        conn.close()
 
      
-def postcodes_data_entry():
+def location_data_entry():
     for item in postcodes_items:
         values_list=list(item.values())
         c.execute("INSERT INTO postcodes(latitude,longitude) VALUES(?,?)", (values_list))
         conn.commit()
-
-
+        c.close()
+        conn.close()
 
 import json
 def store_data_in_variables():
@@ -61,7 +62,4 @@ def store_data_in_variables():
 
 
 
-#create_table()
-#store_data_in_variables()
-#people_data_entry()
-#business_data_entry()
+
