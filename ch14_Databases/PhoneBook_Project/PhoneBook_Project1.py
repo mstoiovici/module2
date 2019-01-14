@@ -5,9 +5,10 @@ Created on Wed Jan  9 11:58:17 2019
 
 @author: maria
 """
-from  people_items import *
+#from  people_items import *
+
 import sqlite3
-conn=sqlite3.connect("phoneBookProject.db")
+conn=sqlite3.connect("phoneBookProject1.db")
 c=conn.cursor()
 
 
@@ -18,9 +19,7 @@ def create_table():
 
 
 def people_data_entry():
-    
-   
-    for item in people_items:
+    for item in people_data:
         #print("first item: ",item)
         #print(type(item))
         #print("-------------------------------")
@@ -33,23 +32,13 @@ def people_data_entry():
     
 
 def business_data_entry():   
-    for item in business_items:
+    for item in business_data:
         values_list=list(item.values())
+        print(values_list)
         c.execute("INSERT INTO businesses(business_name, adress_line_1,adress_line_2, adress_line_3,postcode, country,telephone_number,business_category) VALUES(?,?,?,?,?,?,?,?)", (values_list))
         conn.commit()
 
-def change_postcodes_in_businesses():
-    for item in business_items:
-        values_list=list(item.values())
-        #print(values_list)
-        #print(type(values_list))
-        postcodes_list=list(values_list[4])
-        #print(values_list[4])
-        print(postcodes_list)
-        #for item in values_list:
-            #c.execute(("INSERT INTO businesses(postcode) VALUES(?,?,?,?,?,?,?,?)", (values_list))
      
-
 def postcodes_data_entry():
     for item in postcodes_items:
         values_list=list(item.values())
@@ -57,7 +46,22 @@ def postcodes_data_entry():
         conn.commit()
 
 
+
+import json
+def store_data_in_variables():
+    global business_data
+    global people_data
+    with open('business.js') as business:
+        business_data=json.load(business)
+    with open('people.js') as people:
+        people_data=json.load(people)
+    #print("business_data: ",business_data)
+    #print("people_data: ",people_data)
+    return business_data,people_data
+
+
+
 #create_table()
+#store_data_in_variables()
 #people_data_entry()
 #business_data_entry()
-change_postcodes_in_businesses()
