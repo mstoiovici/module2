@@ -44,3 +44,12 @@ def read_from_db2():
     c.execute('SELECT*FROM stuffToBuild WHERE value=8 and unix>1534855733 and unix<1547033137')
     for row in c.fetchall():
         print(row[0])
+#create_table()
+#data_entry()
+#for i in range(10):
+#    dynamic_data_entry()
+#    time.sleep(1)
+#c.close()
+#conn.close()
+#read_from_db_all()
+read_from_db2()
