@@ -52,9 +52,9 @@ import json
 def store_data_in_variables():
     global business_data
     global people_data
-    with open('business.js') as business:
+    with open('../json/business.js') as business:
         business_data=json.load(business)
-    with open('people.js') as people:
+    with open('../json/people.js') as people:
         people_data=json.load(people)
     #print("business_data: ",business_data)
     #print("people_data: ",people_data)
