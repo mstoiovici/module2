@@ -14,6 +14,8 @@ def countWords(filename):
     data=open(filename,'r')
     for row in data:
         words=row.split()
+        #print(words)
+        #print("------------------------------------")
         for word in words:
             #print("This word is: ",word)
             if word in result:
@@ -22,7 +24,7 @@ def countWords(filename):
             else:
                 result[word]=1
                 #print("wordCount is: ",result[word])
-    print("Result is now",result)
+    #print("Result is now",result)
     return result
     
  
@@ -50,15 +52,38 @@ def readStopWords(filename):
     """
     stops=[]
     result=countWords(filename)
-    print(type(result))
+    #print(type(result))
+    #print("--------------------------------------------------")
     stops=list(result.keys())
-    print(stops)
+    #print(stops)
+    return stops
     
     
+def countWordsNotInStopWords(filename,stopwords):
+    """This function takes as an input a txt file and returns a results as a dictionary
+    """
+    result={}
+    data=open(filename,'r')
     
+    for row in data:
+        words=row.split()
+        #print(words)
+        print("------------------------------------")
+        for word in words:
+            print("This word is: ",word)
+            if word not in stopwords:
+                print("This word is not in stopwords so it's being counted and added")
+                if word in result:
+                    result[word]+=1
+                else:
+                    result[word]=1
+                
+            else:
+                print("This word is in stopwords")
+                
+    print("Result is now",result)
+    return result    
     
-    
-    #return stops
     
     
     
@@ -67,4 +92,5 @@ def readStopWords(filename):
    
 #countWords('textData/george01.txt')
 #printTop20(countWords('textData/mobydick.txt'))
-readStopWords('textData/stopwords.txt')
+#readStopWords('textData/stopwords.txt')
+countWordsNotInStopWords('textData/mobypara.txt',readStopWords('textData/stopwords.txt'))
