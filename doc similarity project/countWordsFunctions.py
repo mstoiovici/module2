@@ -12,7 +12,7 @@ def countWords(filename):
     """
     result={}
     data=open(filename,'r')
-    for row in data:
+        for row in data:
         words=row.split()
         #print(words)
         #print("------------------------------------")
@@ -26,24 +26,24 @@ def countWords(filename):
                 #print("wordCount is: ",result[word])
     #print("Result is now",result)
     return result
-    
- 
+
+ ####filename to camelcase;words to wordList
 
 print("-----------Task2 -Sorting and ranking---------------")
 
 def printTop20(dictionary):
-    """This function takes as an input a dictionary in which the keys are words and the values are numbers and prints a dictionary 
-    containing top 20 words from the input
+    """This function takes as an input a dictionary in which the keys are words and the values are numbers and prints
+     top 20 words from the input
     """
-    dict={}
+
     keys=list(dictionary.keys())
     #print(keys)
     keys.sort(reverse=True,key=lambda value:dictionary[value])
-    for i in range(20):
-        key=keys[i]
+    for index in range(20):
+        key=keys[index]
         print(key," = ",dictionary[key])
-         
-        
+
+######## keys to keyList
 
 print("-----------Task3 -Stopwords---------------")
 
@@ -55,16 +55,16 @@ def readStopWords(filename):
     #print(type(result))
     #print("--------------------------------------------------")
     stops=list(result.keys())
-    #print(stops)
+    print(stops)
     return stops
-    
-    
+
+
 def countWordsNotInStopWords(filename,stopwords):
     """This function takes as an input a txt file and returns a results as a dictionary
     """
     result={}
     data=open(filename,'r')
-    
+
     for row in data:
         words=row.split()
         #print(words)
@@ -77,20 +77,20 @@ def countWordsNotInStopWords(filename,stopwords):
                     result[word]+=1
                 else:
                     result[word]=1
-                
+
             else:
                 print("This word is in stopwords")
-                
+
     print("Result is now",result)
-    return result    
-    
-    
-    
-    
+    return result
 
 
-   
+
+
+
+
+
 #countWords('textData/george01.txt')
 #printTop20(countWords('textData/mobydick.txt'))
-#readStopWords('textData/stopwords.txt')
-countWordsNotInStopWords('textData/mobypara.txt',readStopWords('textData/stopwords.txt'))
+readStopWords('textData/stopwords.txt')
+#countWordsNotInStopWords('textData/mobypara.txt',readStopWords('textData/stopwords.txt'))
