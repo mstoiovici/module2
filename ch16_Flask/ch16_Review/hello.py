@@ -8,7 +8,7 @@ def hello_someone():
     return "This will be Mariana's page"
 @app.route("/Mariana/<name>")     ##### how do I return the else statement in my html, cause if I don't give a name, I'll get a not found URL error
 def hello_someone_else(name):
-    return render_template("hello.html", name=name.title())
+    return render_template("templates/hello.html", name=name.title())
 ######Get information from user
 
 @app.route("/signup", methods=["POST"])
