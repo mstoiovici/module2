@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>{{title}} </title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+ </head>
+ <body>
+
+    <header>
+		<h1>{{title}}</h1>
+
+    <p> {{quote}}
+    <p>Let’s keep in touch!</p>
+    <div id="contact-form">
+    <form method="post" action="/confirmation">
+        <label for="email">Email address:</label>
+        <input type="email" id="email" name="email" required="required">
+        <input type="submit" id="submit-button" name="submit" value="Submit" >
+    </form>
+    </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+
+ </body>
+</html>

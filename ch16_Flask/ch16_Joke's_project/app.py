@@ -29,4 +29,4 @@ def confirmation():
 	return render_template("confirmation.html", title="Form confirmation", **locals())
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5002)
+    app.run(debug=True)

@@ -21,4 +21,4 @@ def sign_up():
     return "All OK"
 
 
-app.run(debug=True,port=5001)
+app.run(debug=True)
