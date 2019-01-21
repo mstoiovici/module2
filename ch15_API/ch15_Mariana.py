@@ -52,17 +52,17 @@ print("this is what data looks like \n")
 print(data)
 print("-------------------")
 print("this is what data['main'] looks like \n")
-print(data['main'])
+#print(data['main'])
 #print("-------------------")
 #print (response.url)
 #print("---------------------")
 #print (response.headers["content-type"])
 print("---------------------")
 print("exp -  Update your Python ﬁle so that it prints out a nice statement to your command line about the weather")
-temperature = data["main"]["temp"]
+#temperature = data["main"]["temp"]
 name = data["name"]
 weather = data["weather"][0]["main"]
-print (u"It's {}C in {}, and the sky is {}".format(temperature, name, weather))
+print ("It's {}C in {}, and the sky is {}".format(temperature, name, weather))
 
 
 print("------------------------------Task3 - independent practice----------------")
