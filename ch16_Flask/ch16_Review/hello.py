@@ -3,11 +3,11 @@ app=Flask("MyApp")
 
 @app.route("/")
 def hello():
-    return "I want to return something else"
+    return "Hello world!!!!!"
 
 @app.route("/Mariana")
 def hello_someone():
-    return "This will be Mariana's page"
+    return "This will be Mariana's web app"
 
 @app.route("/Mariana/<name>")     ##### how do I return the else statement in my html, cause if I don't give a name, I'll get a not found URL error
 def hello_someone_else(name):
