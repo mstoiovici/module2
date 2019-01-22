@@ -1,0 +1,17 @@
+task1 - weblink to my app deployed on heroku
+https://secret-ocean-42947.herokuapp.com/
+
+task2: specify the steps taken to launch the app on heroku
+ In your terminal:
+1- Initialise your repository (local or on Github) and commit it
+2- log into your heroku account --> heroku login
+3- create a heroku repository for your app --> heroku create
+			- you will get the url for your online heroku app in blue, and an url for the heroku repository you created in green
+			
+	3.1 - if you make changes to your local/github repo:
+		3.1.1 git add .; git commit -m"new change msg"
+		3.1.2 follow step 4
+4- push your local repository to your heroku repository --> git push heroku master
+5- open your app on heroku --> heroku open
+
+
