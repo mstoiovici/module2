@@ -71,6 +71,7 @@ def index():
 @app.route("/confirmation", methods=["POST"])
 def confirmation():
 	form_data = request.form
+    
 	email = form_data["email"]
 	result="All OK"
 	return render_template("confirmation.html", title="Mariana's Form confirmation", **locals())
