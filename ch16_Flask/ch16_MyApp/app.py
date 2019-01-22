@@ -71,7 +71,7 @@ def index():
 @app.route("/confirmation", methods=["POST"])
 def confirmation():
 	form_data = request.form
-    
+
 	email = form_data["email"]
 	result="All OK"
     type_form = type(form_data)
