@@ -74,6 +74,7 @@ def confirmation():
     
 	email = form_data["email"]
 	result="All OK"
+    type_form = type(form_data)
 	return render_template("confirmation.html", title="Mariana's Form confirmation", **locals())
 
 if __name__ == "__main__":
